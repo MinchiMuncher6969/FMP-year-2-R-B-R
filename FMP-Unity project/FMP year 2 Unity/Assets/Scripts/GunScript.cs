@@ -13,6 +13,7 @@ public class GunScript : MonoBehaviour {
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+            Debug.Log("Shooting");
         }
     }
 
@@ -22,6 +23,7 @@ public class GunScript : MonoBehaviour {
         if (Physics.Raycast(Gun.transform.position, Gun.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
+            Debug.Log("Hit");
         }
     }
 }
