@@ -4,6 +4,7 @@ public class GunScript : MonoBehaviour {
 
     public float damage = 10f;
     public float range = 100f;
+    
 
     public ParticleSystem muzzleFlash;
 
@@ -13,12 +14,12 @@ public class GunScript : MonoBehaviour {
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
-           
             Debug.DrawRay(transform.position, transform.forward * range, Color.yellow, 1, true);
         }
+
     }
 
     void Shoot ()
